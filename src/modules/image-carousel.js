@@ -31,6 +31,9 @@ function nextImage(element) {
     dom.backgroundImage(imageCarousel, images[currentImage]);
     buttonChangeColor(currentImage);
   });
+  setInterval(() => {
+    element.click()
+}, 5000)
 }
 
 function previousImage(element) {
@@ -42,7 +45,7 @@ function previousImage(element) {
 }
 
 function incrementImageIndex() {
-    ++currentImage;
+  ++currentImage;
   if (currentImage === images.length) currentImage = 0;
 }
 
@@ -54,12 +57,12 @@ function decrementImageIndex() {
 function buttonChangeColor(currentIndex) {
   const buttons = dom.divDots.querySelectorAll("button");
   buttons.forEach((button, index) => {
-    if (index === currentIndex){
-        button.style.background = "red";
-        button.style.color = "red";
+    if (index === currentIndex) {
+      button.style.background = "red";
+      button.style.color = "red";
     } else {
-        button.style.background = "lightgrey";
-        button.style.color = "lightgrey"
+      button.style.background = "lightgrey";
+      button.style.color = "lightgrey";
     }
   });
 }
