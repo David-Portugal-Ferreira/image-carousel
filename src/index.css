@@ -1,0 +1,36 @@
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75%;
+    width: 75%;
+}
+
+.image-carousel {
+    height: 90%;
+    width: 90%;
+}
+
+.image-buttons {
+    border-radius: 50px;
+    border-style: none;
+}
+
+.dots {
+    display: flex;
+    gap: 5px;
+}
